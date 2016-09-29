@@ -1,4 +1,5 @@
 仅仅是一个 react-hot-loader v3.x.x，babel，webpack，webpack-dev-server的Demo
+(上传原因：手贱升级了下react-hot-loader 才发现已经3.0.0了。然后就是逛作者博客，填坑。。)
 
 
 环境：    
