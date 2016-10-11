@@ -23,3 +23,24 @@ react-hot-loader @latest(3.x.x-beta)  升级到最新版本
 如果你使用了babel-loader 和 es6 的话 需要 在.babel中添加plugins 具体参考 .babelrc文件 而不需要在webpack.config中的loaders添加 react-hot，其他情况相反。
 
 入口entry 需添加'react-hot-loader/patch'。
+
+补充遇到的坑：
+
+部署到docker中的时候，webpack加上uglyfy的问题
+
+关于process.env.NODE_ENV不识别
+踩坑链接：
+https://github.com/webpack/webpack/issues/868
+
+这里要在webpack.config.js中添加
+
+new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': '"production"'
+            }
+        })
+
+
+
+
+
